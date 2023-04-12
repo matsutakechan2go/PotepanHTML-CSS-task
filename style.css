@@ -1,5 +1,158 @@
 @charset "utf-8";
 
-.headline-area {
+/* common */
+
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+area,
+div,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+small {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.body {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.headline-container, headline-content-btn, headline-notes, movie-line {
+  padding: 0 5%;
+}
+
+.header-logo-pc {
+  display: none;
+}
+
+header ul {
+  display: none;
+}
+
+/* header */
+
+header {
+  background: white;
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 18px;
+}
+
+.header-logo-sp {
+  height: 16px;
+}
+
+
+.header-nav-container {
+  display: block;
+  width: 30px;
+  height: 21px;
+}
+
+.header-nav-line1 {
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+  width: 100%;
+  height: 3px;
+}
+
+.header-nav-line2,
+.header-nav-line3 {
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+  width: 100%;
+  height: 3px;
+  margin-top: 7px;
+}
+
+/* headline */
+
+
+.headline-img {
   background-size: cover;
+  background-position: center;
+}
+
+/* headline-container */
+
+.headline-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.headline-content h2 {
+  text-align: center;
+  line-height: 36px;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.headline-containt-images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+
+}
+
+.headline-containt-images img {
+  margin-right: 8px;
+}
+
+.hl-content-side_img {
+  width: 27.5%;
+}
+
+.hl-content-main_img {
+  width: 40%;
+}
+
+.headline-counseling-btn {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  border-radius: 38px;
+  background-color: #f79214;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+
+.headline-notes {
+  color: #a2a2a4;
+  font-size: 12px;
+  line-height: 1.5;
 }
