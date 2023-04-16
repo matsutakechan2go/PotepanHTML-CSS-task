@@ -19,7 +19,7 @@ li,
 h1,
 h2,
 h3,
-area,
+section,
 div,
 img {
   margin: 0;
@@ -28,10 +28,6 @@ img {
 
 body {
   -webkit-font-smoothing: antialiased;
-}
-
-a {
-  text-decoration: none;
 }
 
 ul {
@@ -155,7 +151,8 @@ header {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  margin-top: -45vh;
+  margin-top: -45vw;
+  margin-bottom: 20px;
 }
 
 .headline-content h2 {
@@ -291,13 +288,13 @@ header {
 /* large screan */
 
 @media (min-width: 767px) {
+ 
   /* header */
 
   header {
     background-color: none;
     position: absolute;
     z-index: 15;
-    background-color: rgba(255, 255, 255, 0.8);
   }
 
   .header-container {
@@ -313,6 +310,15 @@ header {
     display: block;
     height: 20px;
     width: auto;
+  }
+
+  header a {
+    text-decoration: none;
+    transition: .2s;
+  }
+  
+  header a:hover {
+    opacity: .8;
   }
 
   /* headline */
@@ -409,6 +415,7 @@ header {
 
   header {
     padding: 20px 0;
+    background-color: transparent;
   }
 
   .header-container {
@@ -461,5 +468,21 @@ header {
     text-align: center;
     padding: 0 20px;
     font-weight: 700;
+  }
+
+  /* about-wrapper */
+
+  .about {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-movie {
+    width: 50%;
+  }
+
+  .about-potepan {
+    margin-left: 32px;
   }
 }
