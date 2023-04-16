@@ -2,6 +2,17 @@
 
 /* common */
 
+*, *:before, *:after {
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body,
 ul,
 li,
@@ -15,8 +26,16 @@ img {
   padding: 0;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 p,
@@ -55,7 +74,19 @@ p {
   margin-inline-end: 0px;
 }
 
+section {
+  display: block;
+}
+
+.headline-img-pc {
+  display: none;
+}
+
 .header-logo-pc {
+  display: none;
+}
+
+.headline-document-btn {
   display: none;
 }
 
@@ -112,13 +143,11 @@ header {
 /* headline */
 
 
-.headline-img {
+.headline-img-sp {
   background-size: cover;
   background-position: center;
   width: 100%;
 }
-
-/* headline-container */
 
 .headline-container {
   padding-left: 20px;
@@ -126,7 +155,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  margin-top: -38vh;
+  margin-top: -45vh;
 }
 
 .headline-content h2 {
@@ -134,11 +163,12 @@ header {
   line-height: 36px;
   color: #333;
   font-family: 'Lato', sans-serif;
-  margin-bottom: 15px;
   font-weight: 700;
   font-size: 25px;
   margin-left: calc(((100vw - 100%)/2)*-1);
   margin-right: calc(((100vw - 100%)/2)*-1);
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .headline-containt-images {
@@ -161,15 +191,16 @@ header {
   width: 40%;
 }
 
-.headline-content-btn {
+.headline-content-btns {
   display: flex;
-  flex-direction: column;
   box-sizing: border-box;
-  margin-bottom: 0;
+  margin: 0;
+  box-sizing: border-box;
+
 }
 
 .headline-counseling-btn {
-  box-sizing: border-box;
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -182,6 +213,7 @@ header {
   text-decoration: none;
   width: 100%;
   font-weight: 700;
+
 }
 
 
@@ -254,4 +286,180 @@ header {
 
 .about-btn-icon {
   margin-right: 5px;;
+}
+
+/* large screan */
+
+@media (min-width: 767px) {
+  /* header */
+
+  header {
+    background-color: none;
+    position: absolute;
+    z-index: 15;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .header-container {
+    margin: 0 36px;
+    max-width: 100%;
+  }
+
+  .header-logo-sp {
+    display: none;
+  }
+
+  .header-logo-pc {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
+
+  /* headline */
+
+
+
+  .headline-img-sp {
+    display: none;
+  }
+
+  .headline {
+  position: relative;
+  background-image: url(images/headline-img-sp.webp);
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 28px;
+  }
+
+  .headline-container {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position:relative;
+    margin-top: 0;
+  }
+
+  .headline-content {
+    margin-bottom: 70px;
+    width: fit-content;
+  }
+
+  .headline-content h2 {
+    font-size: 38px;
+    line-height: 54px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .headline-content-btns a {
+    transition: .2s;
+  }
+
+  .headline-content-btns a:hover {
+    opacity: .8;
+  }
+
+  .headline-counseling-btn {
+    width: 306px;
+    margin-right: 15px;
+  }
+
+  .headline-document-btn {
+    display: flex;
+    height: 64px;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    width: 176px;
+    border-radius: 38px;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  /* about-wrapper */
+
+  .about-wrapper {
+    padding: 44px 0; 
+  }
+
+  .about {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-movie {
+    margin-bottom: 16px;
+    width: 75%;
+  }
+
+  .about-potepan {
+    width: 75%;
+  }
+}
+
+@media (min-width:1080px) {
+  /* header */
+
+  header {
+    padding: 20px 0;
+  }
+
+  .header-container {
+    height: 40px;
+  }
+
+  .header-nav-container {
+    display: none;
+  }
+
+
+  .header-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  .header-nav-item {
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+    margin-right: 35px;
+    font-weight: 700;
+  }
+
+  .header-nav-item a {
+    color: #333;
+    display: block;
+  }
+  
+
+  .header-nav-item::first-line {
+    font-size: 14px;
+    font-family: 'Lato',sans-serif;
+  }
+
+  .header-counseling-btn {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    background-color: #f79214;
+    color: #fff;
+    border-radius: 38px;
+    height: 40px;
+    line-height: 40px;
+    width: 148px;
+    text-align: center;
+    padding: 0 20px;
+    font-weight: 700;
+  }
 }
